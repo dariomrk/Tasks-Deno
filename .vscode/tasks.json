@@ -1,0 +1,32 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "deno",
+			"command": "run",
+			"args": [
+				"server.ts",
+				"--allow-net",
+				"--allow-read"
+			],
+			"problemMatcher": [
+				"$deno"
+			],
+			"label": "deno: run"
+		},
+		{
+			"type": "deno",
+			"command": "run",
+			"args": [
+				"--watch",
+				"server.ts",
+				"--allow-net",
+				"--allow-net"
+			],
+			"problemMatcher": [
+				"$deno"
+			],
+			"label": "deno: run --watch"
+		}
+	]
+}
