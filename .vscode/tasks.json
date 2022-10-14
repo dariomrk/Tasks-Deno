@@ -5,9 +5,10 @@
 			"type": "deno",
 			"command": "run",
 			"args": [
-				"server.ts",
+				"--allow-read",
+				"--allow-env",
 				"--allow-net",
-				"--allow-read"
+				"server.ts"
 			],
 			"problemMatcher": [
 				"$deno"
@@ -19,9 +20,8 @@
 			"command": "run",
 			"args": [
 				"--watch",
+				"-A",
 				"server.ts",
-				"--allow-net",
-				"--allow-net"
 			],
 			"problemMatcher": [
 				"$deno"
