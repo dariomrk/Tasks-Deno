@@ -6,6 +6,8 @@ import CONFIG from "../config.ts";
 const CLIENT = new MongoClient();
 
 await CLIENT.connect(`mongodb://${CONFIG.DB_HOST}:${CONFIG.DB_PORT}`);
-const COLLECTION = await CLIENT.database(CONFIG.DB_NAME).collection<TaskSchema>("data");
+const COLLECTION = await CLIENT.database(CONFIG.DB_NAME).collection<TaskSchema>(
+  "data",
+);
 
 export default COLLECTION;

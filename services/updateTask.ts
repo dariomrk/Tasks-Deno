@@ -6,7 +6,7 @@ const updateTask = async (
   entry: { title: string; body: string; checked: boolean },
 ) => {
   await deleteTask(id);
-  await createTask(entry,id);
+  await createTask(entry, id);
 };
 
 export default updateTask;

@@ -3,7 +3,7 @@ import COLLECTION from "../database/collection.ts";
 
 const createTask = async (
   entry: { title: string; body: string; checked: boolean },
-  id = ""
+  id = "",
 ): Promise<void> => {
   const idObj = new ObjectId(id);
 
