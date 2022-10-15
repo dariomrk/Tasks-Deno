@@ -8,11 +8,11 @@ import { Router } from "https://deno.land/x/oak/mod.ts";
 
 const ROUTER = new Router();
 
-ROUTER;
-// .get("/tasks", getTasks)
-// .get("/tasks/:id", getTask)
-// .post("/tasks", createTask)
-// .put("/tasks/:id", updateTask)
-// .delete("/tasks/:id", deleteTask);
+// ROUTER
+//   .get("/tasks", getTasks)
+//   .get("/tasks/:id", getTask)
+//   .post("/tasks", createTask)
+//   .put("/tasks/:id", updateTask)
+//   .delete("/tasks/:id", deleteTask);
 
 export default ROUTER;
