@@ -1,4 +1,7 @@
-import { ObjectId, Timestamp } from "https://deno.land/x/web_bson/mod.ts";
+import {
+  ObjectId,
+  Timestamp,
+} from "https://deno.land/x/web_bson@v0.2.5/mod.ts";
 import COLLECTION from "../database/collection.ts";
 
 const createTask = async (
@@ -7,7 +10,7 @@ const createTask = async (
     body: string;
     checked: boolean;
   },
-  id? : string,
+  id?: string,
 ): Promise<void> => {
   const idObj = new ObjectId(id);
 

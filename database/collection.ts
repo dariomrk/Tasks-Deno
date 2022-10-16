@@ -1,4 +1,4 @@
-import { MongoClient } from "https://deno.land/x/mongo/mod.ts";
+import { MongoClient } from "https://deno.land/x/mongo@v0.31.1/mod.ts";
 import TaskSchema from "../interfaces/taskSchema.ts";
 
 import CONFIG from "../config.ts";

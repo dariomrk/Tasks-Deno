@@ -1,10 +1,32 @@
 import { Response } from "https://deno.land/x/oak@v11.1.0/response.ts";
-import createTask from "../services/createTask.ts";
+import getTask from "../services/getTask.ts";
+import updateTask from "../services/updateTask.ts";
 
 export default async (
-  // deno-lint-ignore no-explicit-any
-  { request, response }: { request: any; response: Response },
+  { params, request, response }: {
+    // deno-lint-ignore no-explicit-any
+    params: any;
+    // deno-lint-ignore no-explicit-any
+    request: any;
+    response: Response;
+  },
 ) => {
+  const id = params.id;
+
+  if (!id) {
+    response.status = 400;
+    response.body = { msg: "Invalid id parameter!" };
+    return;
+  }
+
+  const task = await getTask(id);
+
+  if (!task) {
+    response.status = 404;
+    response.body = { msg: "Task with given id does not exist!" };
+    return;
+  }
+
   if (!request.body) {
     response.status = 400;
     response.body = { msg: "Invalid request body!" };
@@ -43,7 +65,7 @@ export default async (
     return;
   }
 
-  await createTask(entry);
-  response.status = 201;
-  response.body = { msg: "Successfully created new task." };
+  await updateTask(id, entry);
+  response.status = 200;
+  response.body = { msg: "Successfully updated task." };
 };
