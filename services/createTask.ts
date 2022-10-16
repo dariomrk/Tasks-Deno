@@ -7,7 +7,7 @@ const createTask = async (
     body: string;
     checked: boolean;
   },
-  id = "",
+  id? : string,
 ): Promise<void> => {
   const idObj = new ObjectId(id);
 

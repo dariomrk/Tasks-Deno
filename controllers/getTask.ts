@@ -1,4 +1,4 @@
-import { Response } from "https://deno.land/x/oak/response.ts";
+import { Response } from "https://deno.land/x/oak@v11.1.0/response.ts";
 import getTask from "../services/getTask.ts";
 
 export default async (

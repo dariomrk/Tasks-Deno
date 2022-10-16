@@ -1,4 +1,4 @@
-import { Application } from "https://deno.land/x/oak/mod.ts";
+import { Application } from "https://deno.land/x/oak@v11.1.0/mod.ts";
 
 import CONFIG from "./config.ts";
 import ROUTER from "./router.ts";
@@ -6,7 +6,8 @@ import errorHandler from "./controllers/errorHandler.ts";
 
 const APP = new Application();
 
-APP.use(errorHandler);
+// deno-lint-ignore no-explicit-any
+APP.use(errorHandler as any);
 APP.use(ROUTER.routes());
 APP.use(ROUTER.allowedMethods());
 
