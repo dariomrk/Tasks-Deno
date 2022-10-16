@@ -26,7 +26,7 @@
       "problemMatcher": [
         "$deno"
       ],
-      "label": "deno: run --watch"
+      "label": "deno: watch"
     }
   ]
 }
