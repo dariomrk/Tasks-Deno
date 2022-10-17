@@ -18,11 +18,6 @@ Simple REST / CRUD backend made with `Typescript`, `Deno`, `Oak` & `MongoDB`.
    If using VSCode press `Ctrl + Shift + P`, search for: `Tasks: Run Task` and then select: `deno: run`.  
 
 ---
-# Debugging
-
-- If using VSCode press `F5` to enjoy the integrated debugger.  
-
----
 # Project structure
 
 ```
@@ -45,6 +40,12 @@ Simple REST / CRUD backend made with `Typescript`, `Deno`, `Oak` & `MongoDB`.
 | ./server.ts
 |       App client
 ```
+
+---
+# Debugging
+
+- If using VSCode press `F5` to enjoy the integrated debugger.  
+
 <!-- Footnotes -->
 [^1]: Assuming default connection values. Take into consideration that you might have to alter the connection string.
 [^2]: Assuming that there is no `.env` file and that the application is fallbacking to using `.env.defaults` DB_NAME value.
